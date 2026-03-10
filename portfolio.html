@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work — DivyWebStudio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">Divy<span>Web</span>Studio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>→</span>
+            <span>Our Work</span>
+        </div>
+        <h1>
+            Our <span class="accent">Work</span><br>
+            <span class="outline">Speaks</span> For Us
+        </h1>
+        <p>Real demo projects built to show what your business website could look like. Every site is live and clickable.</p>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-section">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+        <button class="filter-btn" onclick="filterProjects('salon', this)">Salon</button>
+        <button class="filter-btn" onclick="filterProjects('restaurant', this)">Restaurant</button>
+        <button class="filter-btn" onclick="filterProjects('gym', this)">Gym</button>
+        <button class="filter-btn" onclick="filterProjects('landing', this)">Landing Page</button>
+        <button class="filter-btn" onclick="filterProjects('travel', this)">Travel</button>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="projects-section">
+        <div class="projects-grid" id="projectsGrid">
+
+            <div class="project-card" data-category="salon">
+                <div class="project-preview project-preview-salon">
+                    <div class="project-preview-text">Hair & Beauty</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-tag">Salon</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Gloom Hair & Beauty</h3>
+                    <p>A luxury salon website with services, booking form, testimonials, and a full pricing page.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://gloom-hair-beauty.netlify.app/" target="_blank" class="project-link">View Live Site</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="restaurant">
+                <div class="project-preview project-preview-restaurant">
+                    <div class="project-preview-text">Food & Dining</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-tag">Restaurant</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Divyansh Restaurant</h3>
+                    <p>A complete restaurant site with full menu, about page, team section, and contact form.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://divyansh-restaurant.netlify.app/" target="_blank" class="project-link">View Live Site</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="gym">
+                <div class="project-preview project-preview-gym">
+                    <div class="project-preview-text">Fitness & Health</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-tag">Gym</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Divyansh Gym Studio</h3>
+                    <p>A professional gym website with trainers section, services, classes schedule, and testimonials.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://divyansh-gym-studio.netlify.app/" target="_blank" class="project-link">View Live Site</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="landing">
+                <div class="project-preview project-preview-fashion">
+                    <div class="project-preview-text">Fashion & Clothing</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-tag">Landing Page</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Velour Fashion</h3>
+                    <p>A luxury clothing brand landing page with collection grid, testimonials, and discount CTA.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                    <a href="https://divyanshladingpage.netlify.app/" target="_blank" class="project-link">View Live Site</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="travel">
+                <div class="project-preview project-preview-travel">
+                    <div class="project-preview-text">Travel & Tourism</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-tag">Travel</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3>Himachal Pradesh Tourism</h3>
+                    <p>A travel agency website showcasing HP tour packages, destinations, and contact form.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                    <a href="https://travil-divyansh.netlify.app/" target="_blank" class="project-link">View Live Site</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="portfolio-cta">
+        <div class="section-label">Want Something Like This?</div>
+        <h2>Let's Build Your<br><span>Website Next</span></h2>
+        <p>We can build a website just like these for your business — fast, clean, and professional.</p>
+        <div class="cta-btns">
+            <a href="https://wa.me/91809127352" target="_blank" class="btn-primary">💬 WhatsApp Us</a>
+            <a href="index.html#contact" class="btn-secondary">Fill Contact Form</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">Divy<span>Web</span>Studio</div>
+        <p>© 2025 DivyWebStudio. Built with ❤️ in Himachal Pradesh, India.</p>
+        <div class="footer-links">
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Work</a>
+            <a href="https://www.instagram.com/divywebstudio/" target="_blank">Instagram</a>
+            <a href="https://wa.me/91809127352" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        const follower = document.getElementById('cursorFollower');
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
+        });
+
+        function animateFollower() {
+            followerX += (mouseX - followerX - 18) * 0.12;
+            followerY += (mouseY - followerY - 18) * 0.12;
+            follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                follower.style.width = '60px';
+                follower.style.height = '60px';
+                follower.style.opacity = '0.2';
+            });
+            el.addEventListener('mouseleave', () => {
+                follower.style.width = '36px';
+                follower.style.height = '36px';
+                follower.style.opacity = '0.5';
+            });
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            const links = document.querySelector('.nav-links');
+            if (links.style.display === 'flex') {
+                links.style.display = 'none';
+            } else {
+                links.style.cssText = 'display:flex; flex-direction:column; position:fixed; top:70px; left:0; right:0; background:#0a0a0a; padding:32px 24px; gap:24px; z-index:99; border-bottom:1px solid rgba(255,255,255,0.06)';
+            }
+        }
+
+        // Filter projects
+        function filterProjects(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.project-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.style.animation = 'none';
+                    card.offsetHeight;
+                    card.style.animation = 'fadeUp 0.4s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
