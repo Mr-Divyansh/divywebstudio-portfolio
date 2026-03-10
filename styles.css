@@ -133,9 +133,7 @@ nav {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(255,92,26,0.08) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 80% 20%, rgba(255,179,71,0.05) 0%, transparent 60%);
-                
+    background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(255,92,26,0.08) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 80% 20%, rgba(255,179,71,0.05) 0%, transparent 60%);       
 }
 
 .hero-tag {
@@ -518,6 +516,11 @@ section {
 .project-preview-gym {
     background: url('img/GymSalonImg.jpg') center/cover no-repeat;
 }
+
+.project-preview-fashion {
+    background: url('img/LadingPageImage.png') center/cover no-repeat;
+}
+
 
 .project-preview-text {
     position: absolute;
