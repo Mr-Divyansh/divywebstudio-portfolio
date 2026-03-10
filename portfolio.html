@@ -13,14 +13,13 @@
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
 
-    <!-- NAV -->
     <nav>
         <div class="nav-logo">Divy<span>Web</span>Studio</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Work</a></li>
-            <li><a href="index.html#process">Process</a></li>
+            <li><a href="process.html">Process</a></li>
             <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
         </ul>
         <div class="hamburger" onclick="toggleMenu()">
@@ -28,7 +27,6 @@
         </div>
     </nav>
 
-    <!-- PAGE HERO -->
     <div class="page-hero">
         <div class="page-hero-bg"></div>
         <div class="breadcrumb">
@@ -43,7 +41,6 @@
         <p>Real demo projects built to show what your business website could look like. Every site is live and clickable.</p>
     </div>
 
-    <!-- FILTER TABS -->
     <div class="filter-section">
         <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
         <button class="filter-btn" onclick="filterProjects('salon', this)">Salon</button>
@@ -53,7 +50,6 @@
         <button class="filter-btn" onclick="filterProjects('travel', this)">Travel</button>
     </div>
 
-    <!-- PROJECTS -->
     <div class="projects-section">
         <div class="projects-grid" id="projectsGrid">
 
@@ -158,18 +154,16 @@
         </div>
     </div>
 
-    <!-- CTA -->
     <div class="portfolio-cta">
         <div class="section-label">Want Something Like This?</div>
         <h2>Let's Build Your<br><span>Website Next</span></h2>
         <p>We can build a website just like these for your business — fast, clean, and professional.</p>
         <div class="cta-btns">
-            <a href="https://wa.me/91809127352" target="_blank" class="btn-primary">💬 WhatsApp Us</a>
+            <a href="https://wa.me/9180912735255" target="_blank" class="btn-primary"> WhatsApp Us</a>
             <a href="index.html#contact" class="btn-secondary">Fill Contact Form</a>
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer>
         <div class="footer-logo">Divy<span>Web</span>Studio</div>
         <p>© 2025 DivyWebStudio. Built with ❤️ in Himachal Pradesh, India.</p>
@@ -177,70 +171,9 @@
             <a href="services.html">Services</a>
             <a href="portfolio.html">Work</a>
             <a href="https://www.instagram.com/divywebstudio/" target="_blank">Instagram</a>
-            <a href="https://wa.me/91809127352" target="_blank">WhatsApp</a>
+            <a href="https://wa.me/918091273525" target="_blank">WhatsApp</a>
         </div>
     </footer>
-
-    <script>
-        // Custom cursor
-        const cursor = document.getElementById('cursor');
-        const follower = document.getElementById('cursorFollower');
-        let mouseX = 0, mouseY = 0;
-        let followerX = 0, followerY = 0;
-
-        document.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
-        });
-
-        function animateFollower() {
-            followerX += (mouseX - followerX - 18) * 0.12;
-            followerY += (mouseY - followerY - 18) * 0.12;
-            follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
-            requestAnimationFrame(animateFollower);
-        }
-        animateFollower();
-
-        document.querySelectorAll('a, button').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                follower.style.width = '60px';
-                follower.style.height = '60px';
-                follower.style.opacity = '0.2';
-            });
-            el.addEventListener('mouseleave', () => {
-                follower.style.width = '36px';
-                follower.style.height = '36px';
-                follower.style.opacity = '0.5';
-            });
-        });
-
-        // Mobile menu
-        function toggleMenu() {
-            const links = document.querySelector('.nav-links');
-            if (links.style.display === 'flex') {
-                links.style.display = 'none';
-            } else {
-                links.style.cssText = 'display:flex; flex-direction:column; position:fixed; top:70px; left:0; right:0; background:#0a0a0a; padding:32px 24px; gap:24px; z-index:99; border-bottom:1px solid rgba(255,255,255,0.06)';
-            }
-        }
-
-        // Filter projects
-        function filterProjects(category, btn) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            document.querySelectorAll('.project-card').forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                    card.style.animation = 'none';
-                    card.offsetHeight;
-                    card.style.animation = 'fadeUp 0.4s ease forwards';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <script src="Js/portfolio.js"></script>
 </body>
 </html>
