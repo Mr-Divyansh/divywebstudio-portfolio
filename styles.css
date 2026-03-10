@@ -534,6 +534,10 @@ section {
     color: rgba(255,255,255,0.3);
 }
 
+.text-black-color {
+    color: rgba(0, 0, 0, 0.404);
+}
+
 .project-info {
     padding: 28px;
 }
