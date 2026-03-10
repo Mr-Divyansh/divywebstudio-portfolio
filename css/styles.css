@@ -507,18 +507,18 @@ section {
 }
 
 .project-preview-salon {
-    background: url('img/HairBeautyImg.jpg') center/cover no-repeat;
+    background: url('img/ProjectImage/HairBeautyImg.jpg') center/cover no-repeat;
 }
 .project-preview-restaurant {
-    background: url('img/restaurantImg.jpg') center/cover no-repeat;
+    background: url('img/ProjectImage/RestaurantImg.jpg') center/cover no-repeat;
 }
 
 .project-preview-gym {
-    background: url('img/GymSalonImg.jpg') center/cover no-repeat;
+    background: url('img/ProjectImage/GymSalonImg.jpg') center/cover no-repeat;
 }
 
 .project-preview-fashion {
-    background: url('img/LadingPageImage.png') center/cover no-repeat;
+    background: url('img/ProjectImage/LadingPageImage.png') center/cover no-repeat;
 }
 
 

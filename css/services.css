@@ -179,19 +179,19 @@
 }
 
 .service-detail-visual-Business {
-    background: url('img/BusinessWebsiteServicesImg.png') center/cover no-repeat;
+    background: url('../img/ProjectImage/BusinessWebsiteServicesImg.png') center/cover no-repeat;
 }
 
 .service-detail-visual-Restaurant {
-    background: url('img/restaurantImg.jpg') center/cover no-repeat;
+    background: url('../img/ProjectImage/restaurantImg.jpg') center/cover no-repeat;
 }
 
 .service-detail-visual-Gym {
-    background: url('img/GymSalonImg.jpg') center/cover no-repeat;
+    background: url('../img/ProjectImage/GymSalonImg.jpg') center/cover no-repeat;
 }
 
 .service-detail-visual-Landing {
-    background: url('img/LadingPageImage.png') center/cover no-repeat;
+    background: url('../img/ProjectImage/LadingPageImage.png') center/cover no-repeat;
 }
 
 
