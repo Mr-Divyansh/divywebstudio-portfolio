@@ -1,36 +1,4 @@
-
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
-
-document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
-});
-
-function animateFollower() {
-    followerX += (mouseX - followerX - 18) * 0.12;
-    followerY += (mouseY - followerY - 18) * 0.12;
-    follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
-    requestAnimationFrame(animateFollower);
-}
-animateFollower();
-
-document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.transform += ' scale(1.5)';
-        follower.style.width = '60px';
-        follower.style.height = '60px';
-        follower.style.opacity = '0.2';
-    });
-    el.addEventListener('mouseleave', () => {
-        follower.style.width = '36px';
-        follower.style.height = '36px';
-        follower.style.opacity = '0.5';
-    });
-});
+// Cursor code REMOVED — normal browser cursor restored
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
