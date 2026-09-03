@@ -82,7 +82,7 @@
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.5px;
 }
 
@@ -108,15 +108,19 @@
     gap: 28px;
 }
 
+.projects-grid > * {
+    min-width: 0;
+}
+
 .project-card {
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--gray);
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeUp 0.6s ease forwards;
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .project-card:nth-child(1) {
@@ -268,15 +272,16 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: gap 0.2s;
-}
-
-.project-link:hover {
-    gap: 12px;
 }
 
 .project-link::after {
     content: '→';
+    display: inline-block;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover::after {
+    transform: translateX(4px);
 }
 
 .portfolio-cta {

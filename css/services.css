@@ -78,6 +78,10 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+.service-row > * {
+    min-width: 0;
+}
+
 .service-row:last-child {
     border-bottom: none;
 }
@@ -249,13 +253,17 @@
     margin-top: 64px;
 }
 
+.pricing-grid > * {
+    min-width: 0;
+}
+
 .pricing-card {
     background: var(--black);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 20px;
     padding: 40px 32px;
     position: relative;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pricing-card:hover {
@@ -356,7 +364,7 @@
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pricing-btn:hover {
@@ -417,7 +425,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    transition: color 0.2s;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-question:hover {
@@ -428,13 +436,13 @@
     font-size: 20px;
     color: var(--accent);
     flex-shrink: 0;
-    transition: transform 0.3s;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0 28px;
     color: var(--muted);
     font-size: 15px;
@@ -519,5 +527,8 @@
 @media (max-width: 600px) {
     .page-hero h1 {
         letter-spacing: -2px;
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
     }
 }

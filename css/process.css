@@ -93,7 +93,11 @@
     position: relative;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item > * {
+    min-width: 0;
 }
 
 .timeline-item.visible {
@@ -131,7 +135,7 @@
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 16px;
     padding: 36px 40px;
-    transition: border-color 0.3s;
+    transition: border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .timeline-item:hover .timeline-right {
@@ -217,11 +221,15 @@
     margin-top: 64px;
 }
 
+.prepare-grid > * {
+    min-width: 0;
+}
+
 .prepare-card {
     background: var(--black);
     padding: 40px 36px;
     border-top: 2px solid transparent;
-    transition: border-color 0.3s;
+    transition: border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prepare-card:hover {
@@ -269,6 +277,10 @@
     margin-top: 64px;
 }
 
+.summary-grid > * {
+    min-width: 0;
+}
+
 .summary-item {
     background: var(--gray);
     padding: 40px 32px;
@@ -285,7 +297,7 @@
     height: 2px;
     background: var(--accent);
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .summary-item:hover::after {
