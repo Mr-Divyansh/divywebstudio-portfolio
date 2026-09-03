@@ -21,13 +21,13 @@ document.querySelectorAll('.service-row, .pricing-card, .faq-item').forEach(el =
 });
 
 const drawer = document.querySelector('.mobile-navigation-drawer');
-const menu = document.querySelector('.nav-links');
 const hamburger = document.querySelector('.hamburger');
 const backdrop = document.querySelector('.mobile-menu-backdrop');
 const closeButton = document.querySelector('.mobile-nav-close');
 
 function closeMenu() {
     if (!drawer || !backdrop || !hamburger) return;
+    const focusWasInDrawer = drawer.contains(document.activeElement);
     drawer.classList.remove('is-open');
     backdrop.classList.remove('is-open');
     hamburger.classList.remove('active');
@@ -36,6 +36,7 @@ function closeMenu() {
     backdrop.setAttribute('aria-hidden', 'true');
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.setAttribute('aria-label', 'Open navigation menu');
+    if (focusWasInDrawer) hamburger.focus();
 }
 
 function openMenu() {
@@ -48,6 +49,7 @@ function openMenu() {
     backdrop.setAttribute('aria-hidden', 'false');
     hamburger.setAttribute('aria-expanded', 'true');
     hamburger.setAttribute('aria-label', 'Close navigation menu');
+    if (closeButton) closeButton.focus();
 }
 
 function toggleMenu() {
@@ -84,12 +86,32 @@ window.addEventListener('resize', () => {
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
         closeMenu();
+        return;
+    }
+    if (event.key === 'Tab' && drawer && drawer.classList.contains('is-open')) {
+        const focusable = drawer.querySelectorAll('a[href], button:not([disabled])');
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
     }
 });
 
 function toggleFaq(btn) {
     const item = btn.parentElement;
     const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item').forEach((faqItem) => {
+        faqItem.classList.remove('open');
+        faqItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+    }
 }

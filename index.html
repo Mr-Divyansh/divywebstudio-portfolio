@@ -100,25 +100,25 @@
 
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon"><img src="img/ServicesImage/BusinessWebsiteImg.png" alt="Portfolio" width="30"></div>
+                <div class="service-icon"><img src="img/ServicesImage/BusinessWebsiteImg.png" alt="" width="30"></div>
                 <h3>Business Website</h3>
                 <p>A complete multi-page website for your business. Home, About, Services, Contact — everything a client needs to trust you.</p>
                 <div class="service-price">₹7,000 <span>onwards</span></div>
             </div>
             <div class="service-card">
-                <div class="service-icon"><img src="img/ServicesImage/RestaurantWebsiteImg.png" alt="Portfolio" width="30"></div>
+                <div class="service-icon"><img src="img/ServicesImage/RestaurantWebsiteImg.png" alt="" width="30"></div>
                 <h3>Restaurant Website</h3>
                 <p>Beautiful food sites with menu pages, online ordering section, location, and contact form. Makes clients hungry!</p>
                 <div class="service-price">₹6,000 <span>onwards</span></div>
             </div>
             <div class="service-card">
-                <div class="service-icon"><img src="img/ServicesImage/GymSalonWebsiteImg.png" alt="Portfolio" width="30"></div>
+                <div class="service-icon"><img src="img/ServicesImage/GymSalonWebsiteImg.png" alt="" width="30"></div>
                 <h3>Gym & Salon Site</h3>
                 <p>Fitness and beauty websites with services, trainers/team section, testimonials, and booking form.</p>
                 <div class="service-price">₹6,000 <span>onwards</span></div>
             </div>
             <div class="service-card">
-                <div class="service-icon"><img src="img/ServicesImage/LandingPageImg.png" alt="Portfolio" width="30"></div>
+                <div class="service-icon"><img src="img/ServicesImage/LandingPageImg.png" alt="" width="30"></div>
                 <h3>Landing Page</h3>
                 <p>A single high-converting page to promote your product, service, or event. Fast to build, fast to launch.</p>
                 <div class="service-price">₹3,500 <span>onwards</span></div>
@@ -298,18 +298,18 @@
             </div>
 
             <div>
-                <div class="contact-form-wrap">
+                <form class="contact-form-wrap" id="contactForm">
                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Ramesh Kumar">
+                        <label for="contactName">Your Name</label>
+                        <input id="contactName" name="name" type="text" placeholder="Ramesh Kumar" required>
                     </div>
                     <div class="form-group">
-                        <label>Phone / WhatsApp</label>
-                        <input type="tel" placeholder="+91 98765 43210">
+                        <label for="contactPhone">Phone / WhatsApp</label>
+                        <input id="contactPhone" name="phone" type="tel" placeholder="+91 98765 43210" required>
                     </div>
                     <div class="form-group">
-                        <label>Type of Website</label>
-                        <select>
+                        <label for="contactWebsite">Type of Website</label>
+                        <select id="contactWebsite" name="website" required>
                             <option value="">Select a category</option>
                             <option>Restaurant Website</option>
                             <option>Gym / Fitness Website</option>
@@ -320,11 +320,11 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Tell Us About Your Business</label>
-                        <textarea placeholder="I have a restaurant in Panipat and need a website with menu and contact page..."></textarea>
+                        <label for="contactMessage">Tell Us About Your Business</label>
+                        <textarea id="contactMessage" name="message" placeholder="I have a restaurant in Panipat and need a website with menu and contact page..." required></textarea>
                     </div>
-                    <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
-                </div>
+                    <button type="submit" class="form-submit">Send Message →</button>
+                </form>
             </div>
         </div>
     </section>
