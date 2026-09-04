@@ -1009,7 +1009,7 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
 }
 
 .mobile-nav-close {
@@ -1199,10 +1199,15 @@ body.menu-open {
         gap: 10px;
     }
     .big-num {
-        font-size: clamp(46px, 17vw, 72px);
-        line-height: 0.9;
+        font-size: clamp(40px, 14vw, 64px);
+        line-height: 0.95;
         letter-spacing: -1px;
-        white-space: nowrap;
+        /* No forced nowrap: if a fallback font (or a device with different
+           font metrics) renders this wider than expected, it wraps onto
+           a second line instead of spilling outside the rounded box. */
+        overflow-wrap: break-word;
+        word-break: keep-all;
+        max-width: 100%;
     }
     .big-num-label {
         font-size: 13px;
