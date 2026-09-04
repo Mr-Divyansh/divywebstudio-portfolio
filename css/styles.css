@@ -16,6 +16,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
 
@@ -24,6 +25,7 @@ body {
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
 
@@ -961,8 +963,16 @@ footer p {
     position: fixed;
     top: 0;
     left: auto;
-    right: 0;
-    width: min(82vw, 320px);
+    --drawer-w: min(82vw, 320px);
+    width: var(--drawer-w);
+    /* Closed state uses a plain offset (right), NOT a transform.
+       A transform on a fixed element can still get painted/measured
+       outside the viewport by some mobile browsers (notably iOS Safari),
+       which is what exposes this drawer when the page is pinch-zoomed
+       out even though overflow-x:hidden is set on html/body. Using
+       `right` instead keeps the box fully outside the viewport without
+       relying on a transformed compositing layer. */
+    right: calc(-1 * var(--drawer-w) - 40px);
     height: 100dvh;
     background: rgba(10, 10, 10, 0.98);
     border-left: 1px solid rgba(255,255,255,0.08);
@@ -970,8 +980,7 @@ footer p {
     display: flex;
     flex-direction: column;
     padding: 20px 20px 28px;
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 9999;
     opacity: 1;
     visibility: hidden;
@@ -982,7 +991,7 @@ footer p {
 }
 
 .mobile-navigation-drawer.is-open {
-    transform: translateX(0);
+    right: 0;
     visibility: visible;
     pointer-events: auto;
 }
