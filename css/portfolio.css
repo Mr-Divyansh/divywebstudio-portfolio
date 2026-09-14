@@ -11,7 +11,9 @@
 .page-hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,92,26,0.07) 0%, transparent 70%);
+    background:
+        radial-gradient(ellipse 70% 55% at 60% 40%, rgba(var(--accent-rgb),0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 20%, rgba(var(--accent3-rgb),0.06) 0%, transparent 60%);
 }
 
 .breadcrumb {
@@ -87,15 +89,22 @@
 }
 
 .filter-btn:hover {
-    border-color: rgba(255,92,26,0.3);
+    border-color: rgba(var(--accent3-rgb),0.35);
     color: var(--white);
+    background: rgba(var(--accent3-rgb), 0.05);
 }
 
 .filter-btn.active {
-    background: var(--accent);
-    border-color: var(--accent);
+    background: var(--gradient-warm);
+    border-color: transparent;
     color: var(--black);
     font-weight: 600;
+    box-shadow: 0 4px 16px rgba(var(--accent-rgb), 0.25);
+}
+
+.filter-btn.active:hover {
+    background: var(--gradient-warm);
+    color: var(--black);
 }
 
 .projects-section {
@@ -143,9 +152,14 @@
     animation-delay: 0.5s;
 }
 
+.project-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
 .project-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(255,92,26,0.3);
+    border-color: rgba(var(--accent-rgb),0.3);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 24px rgba(var(--accent-rgb),0.08);
 }
 
 .project-preview {
@@ -157,6 +171,12 @@
     font-size: 52px;
     position: relative;
     overflow: hidden;
+    background-size: cover !important;
+    transition: background-size 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-preview {
+    background-size: 108% !important;
 }
 
 .project-preview-salon {
@@ -177,6 +197,10 @@
 
 .project-preview-travel {
     background: url("../img/ProjectImage/BusinessWebsiteServicesImg.png") center/cover no-repeat;
+}
+
+.project-preview-attendx {
+    background: url("../img/ProjectImage/AttendxdImage.png") center/cover no-repeat;
 }
 
 .project-preview::after {
@@ -217,7 +241,7 @@
 
 .project-tag {
     display: inline-block;
-    background: rgba(255,92,26,0.1);
+    background: rgba(var(--accent-rgb),0.1);
     color: var(--accent);
     font-size: 11px;
     font-weight: 600;
@@ -225,6 +249,17 @@
     text-transform: uppercase;
     padding: 4px 12px;
     border-radius: 100px;
+}
+
+.project-card[data-category="gym"] .project-tag,
+.project-card[data-category="salon"] .project-tag {
+    background: rgba(var(--accent2-rgb), 0.12);
+    color: var(--accent2);
+}
+
+.project-card[data-category="travel"] .project-tag {
+    background: rgba(var(--accent3-rgb), 0.12);
+    color: var(--accent3);
 }
 
 .project-year {
@@ -262,6 +297,13 @@
     padding: 4px 10px;
     border-radius: 4px;
     letter-spacing: 0.5px;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .project-link {

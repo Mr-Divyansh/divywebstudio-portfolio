@@ -1,21 +1,21 @@
-# 🚀 DivyWebStudio — Web Design & Development
+# 🚀 D Web Studio — Web Design & Development
 
 > **We Build Websites That Win.**
 
-**DivyWebStudio** is a professional web design and development studio focused on building modern, responsive, fast, and affordable websites for local businesses.
+**D Web Studio** is a professional web design and development studio focused on building modern, responsive, fast, and affordable websites for local businesses.
 
 The studio is built around one goal:
 
 **Help small and local businesses build a stronger online presence and turn visitors into customers.**
 
-🌐 **Live Website:** [DivyWebStudio](https://divywebstudio-portfolio.vercel.app/)
+🌐 **Live Website:** [D Web Studio](https://divywebstudio-portfolio.vercel.app/)
 💻 **GitHub:** [Mr-Divyansh](https://github.com/Mr-Divyansh)
 
 ---
 
-## ✨ About DivyWebStudio
+## ✨ About D Web Studio
 
-DivyWebStudio creates custom websites for businesses that want a professional online presence without the complexity and high costs of traditional agencies.
+D Web Studio creates custom websites for businesses that want a professional online presence without the complexity and high costs of traditional agencies.
 
 We work with:
 
@@ -38,7 +38,7 @@ From a simple landing page to a complete business website, every project is desi
 
 Many local businesses have great products and services but lack a professional online presence.
 
-DivyWebStudio aims to solve that problem by providing:
+D Web Studio aims to solve that problem by providing:
 
 **Professional websites → Affordable pricing → Fast delivery → Better online presence**
 
@@ -89,7 +89,7 @@ High-impact landing pages for businesses, campaigns, products, and services.
 
 ---
 
-# ⚡ Why DivyWebStudio?
+# ⚡ Why D Web Studio?
 
 ### 🚀 Fast Delivery
 
@@ -124,7 +124,7 @@ The website should help the business:
 
 # 💼 Portfolio
 
-Some projects created by DivyWebStudio:
+Some projects created by D Web Studio:
 
 ### 📊 AttendX
 
@@ -184,7 +184,7 @@ Handmade stone business website concept.
 
 # 🎨 Design Philosophy
 
-DivyWebStudio follows a simple principle:
+D Web Studio follows a simple principle:
 
 > **Keep it modern. Keep it fast. Keep it useful.**
 
@@ -359,7 +359,7 @@ The current production build has passed responsive checks across:
 
 # 📈 Client Acquisition
 
-DivyWebStudio is not intended to be just a developer portfolio.
+D Web Studio is not intended to be just a developer portfolio.
 
 The website is designed as a **client acquisition platform**.
 
@@ -417,7 +417,7 @@ https://github.com/Mr-Divyansh
 
 **Divyansh Kumar**
 
-Founder & Developer — **DivyWebStudio**
+Founder & Developer — **D Web Studio**
 
 Building modern websites for businesses and turning ideas into real products.
 
@@ -436,7 +436,7 @@ If you like the work or find the projects useful:
 
 <p align="center">
 
-### **DivyWebStudio**
+### **D Web Studio**
 
 **Professional websites for businesses that want to grow online.**
 
